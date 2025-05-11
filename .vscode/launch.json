@@ -1,0 +1,45 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Main",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Unit Test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "--rootdir=${workspaceFolder}",
+                "tests/unit"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Integration Test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "--rootdir=${workspaceFolder}",
+                "tests/integration"
+            ],
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "End-to-End Test",
+            "type": "debugpy",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "--rootdir=${workspaceFolder}",
+                "tests/e2e"
+            ],
+            "console": "integratedTerminal"
+        }
+    ]
+}
